@@ -1,0 +1,14 @@
+﻿
+@model Library.Employee
+@{
+    ViewBag.Title = "DeleteEmployee";
+}
+
+<h2>UpdateEmp</h2>
+
+@using (Html.BeginForm())
+{
+    <p>ID : @Html.TextBoxFor(m => m.eid)</p>
+
+    <input type="submit" value="Delete" />
+}

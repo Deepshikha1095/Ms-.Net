@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Library.Employee>
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    body{
+           background-color:pink;
+     }
+</style>
+<h2>EMPLOYEE DETAILS</h2>
+
+<table border="4" style="background-color:orangered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody style="background-color:yellow">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.eid</td>
+                <td>@item.ename</td>
+                <td>@item.dept</td>
+                <td>@Html.ActionLink("Update", "UpdateEmployee", new { id = item.eid })</td>
+                <td>   @Html.ActionLink("Delete", "DeleteEmployee", new { id = item.eid })</td>
+            </tr>
+        }
+    </tbody>
+</table> 

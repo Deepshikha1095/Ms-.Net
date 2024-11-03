@@ -1,0 +1,16 @@
+﻿
+@model Library.Employee
+@{
+    ViewBag.Title = "UpdateEmployee";
+}
+
+<h2>UpdateEmp</h2>
+
+@using (Html.BeginForm())
+{
+    <p>ID : @Html.TextBoxFor(m => m.eid)</p>
+    <p>Name : @Html.TextBoxFor(m => m.ename)</p>
+    <p>Dept : @Html.TextBoxFor(m => m.dept)</p>
+
+    <input type="submit" value="UPDATE" />
+}
